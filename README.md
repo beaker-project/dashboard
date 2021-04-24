@@ -1,18 +1,7 @@
-# Dandelion
+# Dashboard
 
-This repository contains code to serve as base for a React/PatternFly project.
+Dashboard is SPA (Single Page Application) for [Beaker](https://github.com/beaker-project/beaker/).
 
-It has some predefined structure, boilerplate code, and examples to start with. Currently, it implements:
-- React Hooks in functional components
-- Patternfly 4
-- TypeScript
-- React-router for route management
-- Redux for state management
-- Redux-saga for side-effects handling
-- Jest + React Testing Library for tests
-- Prettier for code style validation
-- ESLint for code checking
-- Commitlint for commit message checking
 
 ## Running it in a container:
 
