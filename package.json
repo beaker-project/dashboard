@@ -1,15 +1,15 @@
 {
-  "name": "dandelion",
+  "name": "beaker-dashboard",
   "version": "1.0.0",
-  "description": "Dandelion | Your favorite React / PatternFly seed",
+  "description": "Beaker NG Dashboard",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/beaker-project/dandelion.git"
+    "url": "git+https://github.com/beaker-project/dashboard.git"
   },
   "author": "Beaker Developers <developers@beaker-project.org>",
-  "license": "MIT",
+  "license": "GPLv2+",
   "bugs": {
-    "url": "https://github.com/beaker-project/beaker-dashboard/issues"
+    "url": "https://github.com/beaker-project/dashboard/issues"
   },
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
@@ -26,7 +26,7 @@
       "pre-push": "npm run prettier && npm run lint && npm run test"
     }
   },
-  "homepage": "https://github.com/beaker-project/beaker-dashboard#readme",
+  "homepage": "https://github.com/beaker-project/dashboard#readme",
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
@@ -71,8 +71,8 @@
   },
   "dependencies": {
     "@patternfly/react-core": "^4.106.2",
-    "@types/react": "^17.0.0",
     "@patternfly/react-icons": "^4.9.9",
+    "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.1",
     "axios": "^0.21.1",
     "react": "^16.14.0",
