@@ -2,7 +2,6 @@ import React from 'react';
 import { connectedRender, fireEvent } from '../../tests/testUtils';
 import MainScreen from './MainScreen';
 
-jest.mock('../localTime/LocalTime', () => () => 'local-time-mock');
 jest.mock('../landingPage/LandingPage', () => () => 'landing-page-mock');
 
 describe('<MainScreen />', () => {
@@ -21,11 +20,7 @@ describe('<MainScreen />', () => {
   test('should render the proper components through navigation', async () => {
     const { result } = connectedRender(<MainScreen />);
     expect(result.getByText(/landing-page-mock/)).toBeInTheDocument();
-    fireEvent.click(result.getByText('Local Time'));
-    expect(result.getByText(/local-time-mock/)).toBeInTheDocument();
-    expect(result.queryByText(/landing-page-mock/)).toBeNull();
     fireEvent.click(result.getByText('Start'));
     expect(result.getByText(/landing-page-mock/)).toBeInTheDocument();
-    expect(result.queryByText(/local-time-mock/)).toBeNull();
   });
 });
