@@ -26,12 +26,7 @@ function* login(action: AnyAction) {
 }
 
 function* logout() {
-  try {
-    yield call(api.post, '/auth/logout');
-  } catch (err) {
-    // Nothing really to do on logout error
-    window.console.log(err);
-  }
+  yield call(api.post, '/auth/logout');
 }
 
 const userSagas = [
