@@ -10,16 +10,16 @@ import {
   PageSidebar,
 } from '@patternfly/react-core';
 
-import logo from '../../assets/img/logo.png';
+import logo from '@assets/img/logo.png';
 
-import { AppState } from '../../store';
+import { AppState } from '@store';
+
+import LandingPage from '@components/landingPage/LandingPage';
+import LoginScreen from '@components/loginScreen/LoginScreen';
+import PageNotFound from '@components/pageNotFound/PageNotFound';
 
 import Navigation from './Navigation';
 import UserMenu from './UserMenu';
-
-import LandingPage from '../landingPage/LandingPage';
-import LoginScreen from '../loginScreen/LoginScreen';
-import PageNotFound from '../pageNotFound/PageNotFound';
 
 const MainScreen: React.FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(true);

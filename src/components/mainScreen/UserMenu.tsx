@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { Dropdown, DropdownItem, DropdownToggle } from '@patternfly/react-core';
 
-import { AppState } from '../../store';
+import { AppState } from '@store';
 
-import { logoutRequest } from '../../store/ducks/user/actions';
+import { logoutRequest } from '@ducks/user/actions';
 
 const UserMenu = () => {
   const dispatch = useDispatch();

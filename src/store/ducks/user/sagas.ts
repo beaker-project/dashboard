@@ -1,7 +1,7 @@
 import { AnyAction } from 'redux';
 import { call, put, takeLatest } from 'redux-saga/effects';
 
-import api from '../../../services/api';
+import api from '@services/api';
 import * as actions from './actions';
 import { LoginResponseData, UserTypes } from './types';
 

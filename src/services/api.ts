@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import config from '../app.config';
+import config from '@config';
 
 const { protocol, fqdn, port } = config.server;
 

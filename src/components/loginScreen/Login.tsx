@@ -4,9 +4,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { LoginForm } from '@patternfly/react-core';
 import { ExclamationCircleIcon } from '@patternfly/react-icons';
 
-import { AppState } from '../../store';
+import { AppState } from '@store';
 
-import { loginRequest } from '../../store/ducks/user/actions';
+import { loginRequest } from '@ducks/user/actions';
 
 const FormControl: React.FC = () => {
   const dispatch = useDispatch();

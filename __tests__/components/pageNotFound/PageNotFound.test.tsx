@@ -1,6 +1,6 @@
 import React from 'react';
-import { connectedRender } from '../../testUtils';
-import PageNotFound from '../../../src/components/pageNotFound/PageNotFound';
+import { connectedRender } from '@tests/testUtils';
+import PageNotFound from '@components/pageNotFound/PageNotFound';
 
 describe('<PageNotFound />', () => {
   test('renders', async () => {
