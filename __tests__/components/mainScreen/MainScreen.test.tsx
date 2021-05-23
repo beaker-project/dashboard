@@ -1,6 +1,6 @@
 import React from 'react';
-import { connectedRender, fireEvent } from '../../tests/testUtils';
-import MainScreen from './MainScreen';
+import { connectedRender, fireEvent } from '../../testUtils';
+import MainScreen from '../../../src/components/mainScreen/MainScreen';
 
 jest.mock('../landingPage/LandingPage', () => () => 'landing-page-mock');
 
