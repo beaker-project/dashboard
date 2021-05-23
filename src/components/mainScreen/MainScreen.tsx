@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { NavLink, Switch, Route } from 'react-router-dom';
+
 import {
   Nav,
   NavItem,
@@ -10,11 +12,22 @@ import {
   PageSidebar,
 } from '@patternfly/react-core';
 
+import { AppState } from '../../store';
+
 import LandingPage from '../landingPage/LandingPage';
+import LoginScreen from '../loginScreen/LoginScreen';
 import PageNotFound from '../pageNotFound/PageNotFound';
 
 const MainScreen: React.FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(true);
+
+  const isLoggedIn = useSelector(
+    (state: AppState) => state.user.data.isLoggedIn
+  );
+
+  if (!isLoggedIn) {
+    return <LoginScreen />;
+  }
 
   const onNavToggle = (): void => setIsNavOpen(!isNavOpen);
 

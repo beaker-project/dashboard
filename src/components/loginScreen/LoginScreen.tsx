@@ -4,23 +4,12 @@ import {
   ListItem,
   ListVariant,
   LoginFooterItem,
-  LoginForm,
   LoginPage,
 } from '@patternfly/react-core';
-import { ExclamationCircleIcon } from '@patternfly/react-icons';
-
 import backgroundImage from './img/login-bg.jpg';
 import logo from './img/logo.png';
 
-const FormControl: React.FC = () => {
-  return (
-    <LoginForm
-      helperText="Invalid log in Credentials"
-      helperTextIcon={<ExclamationCircleIcon color="red" />}
-      showHelperText
-    />
-  );
-};
+import Login from './Login';
 
 const footer = (
   <>
@@ -49,7 +38,7 @@ const loginScreen: React.FC = () => {
       footerListItems={footer}
       footerListVariants={ListVariant.inline}
     >
-      <FormControl />
+      <Login />
     </LoginPage>
   );
 };
