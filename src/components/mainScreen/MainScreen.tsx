@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { NavLink, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 import {
-  Nav,
-  NavItem,
-  NavList,
+  Brand,
   Page,
   PageHeader,
   PageHeaderTools,
   PageSidebar,
 } from '@patternfly/react-core';
 
+import logo from '../../assets/img/logo.png';
+
 import { AppState } from '../../store';
+
+import Navigation from './Navigation';
+import UserMenu from './UserMenu';
 
 import LandingPage from '../landingPage/LandingPage';
 import LoginScreen from '../loginScreen/LoginScreen';
@@ -33,28 +36,21 @@ const MainScreen: React.FC = () => {
 
   const Header = (
     <PageHeader
-      logo="Logo"
-      headerTools={<PageHeaderTools>Toolbar | Avatar</PageHeaderTools>}
+      logo={<Brand src={logo} alt="Beaker Logo" />}
+      headerTools={
+        <PageHeaderTools>
+          <UserMenu />
+        </PageHeaderTools>
+      }
       showNavToggle
       isNavOpen={isNavOpen}
       onNavToggle={onNavToggle}
     />
   );
-  const Navigation = (
-    <Nav id="nav-primary-simple" theme="dark">
-      <NavList id="nav-list-simple">
-        <NavItem>
-          <NavLink exact to="/" activeClassName="pf-m-current">
-            Start
-          </NavLink>
-        </NavItem>
-      </NavList>
-    </Nav>
-  );
 
   const Sidebar = (
     <PageSidebar
-      nav={Navigation}
+      nav={<Navigation />}
       isNavOpen={isNavOpen}
       theme="dark"
       data-testid="sidebar"
