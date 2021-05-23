@@ -14,9 +14,9 @@
   "scripts": {
     "start": "webpack serve --open --mode development",
     "build": "webpack --mode production",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
-    "prettier": "prettier --check \"./src/**/*.{js,jsx,ts,tsx}\"",
-    "prettier:fix": "prettier --write \"./src/**/*.{js,jsx,ts,tsx}\"",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src __tests__ __mocks__ --color",
+    "prettier": "prettier --check \"./{src,__tests__,__mocks__}/**/*.{js,jsx,ts,tsx}\"",
+    "prettier:fix": "prettier --write \"./{src,__tests__,__mocks__}/**/*.{js,jsx,ts,tsx}\"",
     "test": "jest --coverage",
     "test:watch": "jest --watch"
   },
