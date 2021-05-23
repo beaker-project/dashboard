@@ -1,6 +1,6 @@
 import React from 'react';
-import { render } from '../../testUtils';
-import LandingPage from '../../../src/components/landingPage/LandingPage';
+import { render } from '@tests/testUtils';
+import LandingPage from '@components/landingPage/LandingPage';
 
 describe('<LandingPage />', () => {
   test('renders', async () => {

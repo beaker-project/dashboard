@@ -6,8 +6,9 @@ import {
   LoginFooterItem,
   LoginPage,
 } from '@patternfly/react-core';
-import backgroundImage from '../../assets/img/login-bg.jpg';
-import logo from '../../assets/img/logo.png';
+
+import backgroundImage from '@assets/img/login-bg.jpg';
+import logo from '@assets/img/logo.png';
 
 import Login from './Login';
 
